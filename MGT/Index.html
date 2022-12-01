@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script src="https://unpkg.com/@microsoft/mgt@2/dist/bundle/mgt-loader.js"></script>
+
+<h1> MGT Tutorial </h1>
+<mgt-msal2-provider client-id="cf3f2c9c-850c-474a-8f40-5bd78f09557e"
+                   login-type="redirect/popup"
+                   scopes="user.read,people.read"
+                   redirect-uri="http://localhost:8080/"
+                   authority="https://login.microsoftonline.com/0b6ac678-f8fb-4b7b-be26-e5656b530d9b"
+                   domainHint="northpole.industries"
+                   prompt="consent"></mgt-msal2-provider>
+<mgt-login></mgt-login>
+<mgt-agenda
+  event-query="/me/events?orderby=start/dateTime"
+></mgt-agenda>
+
+</body>
+</html>

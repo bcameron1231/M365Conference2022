@@ -1,0 +1,103 @@
+body {
+  display: block;
+  --default-font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI",
+    -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+  --default-font-size: 14px;
+  --theme-primary-color: #0078d7;
+  --theme-dark-color: #005a9e;
+}
+.agenda-list {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+  font-family: var(--default-font-family);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.event {
+  background: var(--event-background-color, #fff);
+  border: var(--event-border, solid 2px transparent);
+  box-shadow: var(
+    --event-box-shadow,
+    0 2px 8px var(--box-shadow-color, rgba(0, 0, 0, 0.092))
+  );
+  margin: var(--event-margin, 0 10px 14px 10px);
+  padding: var(--event-padding, 0);
+  display: flex;
+  border-radius: 8px;
+}
+.event-time-container {
+  display: flex;
+  flex-direction: column;
+  margin: 18px 38px 18px 18px;
+  width: 125px;
+}
+.event-time {
+  font-size: var(--event-time-font-size, 12px);
+  color: var(--event-time-color, var(--color, #000));
+  font-weight: 600;
+}
+.event-details-container {
+  margin: 14px 18px 14px 0px;
+}
+
+.event-attendees {
+  --list-margin: 8px 0 0 0;
+  --avatar-size-s: 20px;
+}
+.event-other-container {
+  margin: 2px 16px 4px auto;
+}
+.event-location-container {
+  display: flex;
+  margin: 8px 18px 0px 0px;
+}
+.event-location-icon svg {
+  height: 12px;
+  stroke: darkgray;
+  vertical-align: top;
+}
+.event-location {
+  font-size: var(--event-location-font-size, 12px);
+  color: var(--event-location-color, var(--color, #000));
+  margin: 0px 0px 0px 4px;
+  line-height: 17px;
+}
+
+.person-root {
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: var(--color, var(--color-sub1, #323130));
+}
+
+.people-list {
+  list-style-type: none;
+  padding: 0;
+}
+.user-avatar {
+  position: relative;
+  width: var(--avatar-size, var(--avatar-size-s, 48px));
+  height: var(--avatar-size, var(--avatar-size-s, 48px));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  cursor: var(--avatar-cursor, inherit);
+}
+.user-avatar.small {
+  width: var(--avatar-size-s, var(--avatar-size, 24px));
+  height: var(--avatar-size-s, var(--avatar-size, 24px));
+  background-color: blue;
+}
+.user-avatar.initials {
+  color: var(--initials-color, #fff);
+  border-radius: var(--avatar-border-radius, 50%);
+  font-weight: 400;
+}
+.initials-text {
+  font-size: 12px;
+  cursor: var(--avatar-cursor, inherit);
+  margin-top: -1px;
+}

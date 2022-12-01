@@ -1,0 +1,11 @@
+1. Create new Azure App Registration
+2. Grant Permission to User.Read and People.Read
+3. Add Provider
+4. Add Login Button
+5. Spin up server http-server --proxy http://localhost:8080?
+6. Show login, Great!
+7. Add Agenda
+8. Show that there is a consent prompt!
+9. Show Agenda
+10. Go to Azure AD and show what that consent just did. 
+11. Sort Agenda by StartTime
