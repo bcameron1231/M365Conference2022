@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "http-server": "^14.1.1",
+    "http-server-proxy": "^0.14.5"
+  }
+}

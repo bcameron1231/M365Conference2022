@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script src="https://unpkg.com/@microsoft/mgt@2/dist/bundle/mgt-loader.js"></script>
+
+<div style="background-color:#F8F9FA;padding:50px;margin-right: auto;margin-left: auto;width:50%;border-radius:10px">
+<h1>M365 Conference 2022 MGT Tutorial</h1>
+        <p className="lead">
+          This sample app shows how to use the Microsoft Graph Toolkit to access a
+          user's data
+</p>
+<mgt-msal2-provider client-id="cf3f2c9c-850c-474a-8f40-5bd78f09557e"
+                   login-type="redirect/popup"
+                   scopes="user.read,people.read"
+                   redirect-uri="http://localhost:8080/"
+                   authority="https://login.microsoftonline.com/0b6ac678-f8fb-4b7b-be26-e5656b530d9b"
+                   domainHint="northpole.industries"
+                   prompt="consent"></mgt-msal2-provider>
+<mgt-login></mgt-login>
+<mgt-agenda
+  event-query="/me/events?orderby=start/dateTime"
+></mgt-agenda>
+</div>
+</body>
+
+</html>

@@ -10,6 +10,7 @@ import ProvideAppContext from "./AppContext";
 import ErrorMessage from "./ErrorMessage";
 import Welcome from "./Welcome";
 import "bootstrap/dist/css/bootstrap.css";
+import { LightRope } from "./LightRope";
 
 // <AppPropsSnippet>
 type AppProps = {
@@ -23,6 +24,7 @@ export default function App({ pca }: AppProps): JSX.Element {
       <ProvideAppContext>
         <Router>
           <Container>
+            <LightRope />
             <ErrorMessage />
             <Routes>
               <Route path="/" element={<Welcome />} />
